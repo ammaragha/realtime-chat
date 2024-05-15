@@ -22,7 +22,8 @@ defineProps({
 let fcmToken = '';
 
 function retrieveFCMToken() {
-    return getToken(messaging, {vapidKey: 'BJu4P1JvcqTnJy6gHZxwoom5eJENGwPje9JBYAzglTMIG1N1p9cZvk9AaOckDMUXw14nIatBhdJT_HnD7epE_8E'})
+    console.log(vapidKey)
+    return getToken(messaging, {vapidKey: vapidKey})
         .then((response) => {
             console.log(response)
             return response

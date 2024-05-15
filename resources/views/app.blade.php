@@ -12,6 +12,9 @@
 
         <!-- Scripts -->
         @routes
+        <script>
+            const vapidKey = "{{ env('VAPID_KEY') }}";
+        </script>
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
     </head>
